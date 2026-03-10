@@ -50,8 +50,8 @@ Do this live on a fresh terminal. If you're worried about network issues, pre-in
 
 ```bash
 # Clone this repo (or have it ready)
-git clone <this-repo-url>
-cd JeanPresentation
+git clone https://github.com/carlheinz/solidpie.git
+cd solidpie
 
 # Run setup — installs Node (if needed), Pi, and our skill
 ./setup.sh
