@@ -117,18 +117,26 @@ This is the moment. Pick 2-3 prompts that resonate with the team's daily work.
 
 **Demo prompt suggestions (pick your favorites):**
 
-**For the backend devs:**
+**🔥 Write Java code live (recommended — this is the wow moment):**
 ```
-Help me design a dunning workflow for overdue invoices.
-I need escalating reminders that eventually suspend the service.
-Show me the data model and the scheduler logic.
+Create the Java entity classes and a Spring service for a
+dunning workflow. I need Invoice, DunningPolicy, DunningStep,
+and a DunningService that checks overdue invoices and escalates
+through reminder → warning → suspension → cancellation.
+Write the actual code in a dunning/ folder here.
 ```
+
+> The room will watch Pi create real Java files that use correct domain concepts —
+> escalation ladders, grace periods, suspension logic — not generic boilerplate.
+> They'll recognise the patterns from their own codebase.
 
 **For the frontend devs:**
 ```
-I need to build a self-service portal page where customers can
-view their invoices, see payment status, and make a payment.
-What components do I need and what API endpoints should I call?
+Create an Angular component for a customer self-service invoice
+list. It should show invoice number, date, amount, status with
+colour coding (paid=green, overdue=red, pending=amber), and a
+"Pay Now" button for unpaid invoices. Write the actual component
+files in a portal/ folder here.
 ```
 
 **For the full room (cross-cutting):**
@@ -137,14 +145,15 @@ We need to add a plan upgrade feature. When a customer upgrades
 their fibre package mid-cycle, we need to handle proration on
 the billing side, update the RADIUS profile for the new speed,
 and show the change on the customer portal. Walk me through
-the full flow.
+the full flow and write the Java service class.
 ```
 
 **What to point out during the demo:**
-- Pi loaded the relevant reference files automatically (billing, provisioning, etc.)
+- Pi **wrote actual code**, not just advice — files on disk, ready for a PR
 - It knows domain-specific terms: proration, dunning, RADIUS CoA, OLT, ONT
-- It understands the relationships: billing ↔ provisioning ↔ CRM
-- It gives practical advice, not generic "here's how REST works"
+- The entity relationships match how ISP billing actually works
+- It understands the full stack: billing ↔ provisioning ↔ CRM
+- This isn't generic "here's how Spring works" — it's **our domain in code**
 
 **If Pi makes a mistake or gives generic advice:**
 > "This is version one of the skill. The beauty is we can iterate —
